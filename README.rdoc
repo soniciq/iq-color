@@ -1,0 +1,66 @@
+= IQ::Color
+
+The IQ::Color gem provides simple classes for representing color values and handles the conversion to and from CSS3 color strings. For more information see: IQ::Color
+
+== Install
+  gem install iq-color
+  
+== Usage
+
+From 3 digit hex strings:
+  color = IQ::Color.from_css('#f80')
+  color.red     #=> 255
+  color.green   #=> 136
+  color.blue    #=> 0
+  color.to_css  #=> "#ff8800"
+
+From 6 digit hex strings:
+  color = IQ::Color.from_css('#f5337b')
+  color.red     #=> 245
+  color.green   #=> 51
+  color.blue    #=> 123
+  color.to_css  #=> "#f5337b"
+
+From rgb notation:
+  color = IQ::Color.from_css('rgb(127,127,255)')
+  color.red     #=> 127
+  color.green   #=> 127
+  color.blue    #=> 255
+  color.to_css  #=> "#7f7fff"
+
+From rgba notation:
+  color = IQ::Color.from_css('rgba(127,127,255,0.4)')
+  color.red     #=> 127
+  color.green   #=> 127
+  color.blue    #=> 255
+  color.alpha   #=> 0.4
+  color.to_css  #=> "rgba(127,127,255,0.4)"
+
+Manually instantiate an RGB value:
+  color = IQ::Color.RGB.new(127, 127, 255)
+  color.to_css  #=> "#7f7fff"
+  
+Manually instantiate an RGBA value:
+  color = IQ::Color.RGB.new(127, 127, 255, 0.4)
+  color.to_css  #=> "rgba(127,127,255,0.4)"
+
+== Documentation
+
+Documentation is handled with YARD[http://github.com/lsegal/yard]. You can
+generate the documentation by running:
+
+ rake yard
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2011 Jamie Hill, SonicIQ Ltd. See LICENSE for details.
