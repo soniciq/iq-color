@@ -41,7 +41,7 @@ Manually instantiate an RGB value:
   color.to_css  #=> "#7f7fff"
   
 Manually instantiate an RGBA value:
-  color = IQ::Color.RGB.new(127, 127, 255, 0.4)
+  color = IQ::Color.RGBA.new(127, 127, 255, 0.4)
   color.to_css  #=> "rgba(127,127,255,0.4)"
 
 == Documentation
