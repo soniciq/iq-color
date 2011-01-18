@@ -46,9 +46,6 @@ Manually instantiate an RGBA value:
 
 == Documentation
 
-Documentation is handled with YARD[http://github.com/lsegal/yard]. You can
-generate the documentation by running:
-
 Documentation is handled with YARD[http://github.com/lsegal/yard]. You can view the docs at http://rdoc.info/github/soniciq/iq-color/master/file/README.rdoc or alternatively, if you have the yard gem installed, run:
 
  rake yard
