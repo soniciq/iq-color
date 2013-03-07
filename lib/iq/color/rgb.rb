@@ -30,8 +30,8 @@ class IQ::Color::RGB < IQ::Color::Base
       # hex notation e.g. '#fed' or '#ffeedd'
       hex = css_string[1..-1]
       colors = case hex.size 
-        when 3 : hex.scan(/[0-9A-Fa-f]/).map { |channel| (channel * 2).to_i(16) }
-        when 6 : hex.scan(/[0-9A-Fa-f]{2}/).map { |channel| channel.to_i(16) }
+        when 3 then hex.scan(/[0-9A-Fa-f]/).map { |channel| (channel * 2).to_i(16) }
+        when 6 then hex.scan(/[0-9A-Fa-f]{2}/).map { |channel| channel.to_i(16) }
         else raise(ArgumentError, 'Hex colour must be in the format of "#fed" or "#ffeedd"')
       end
       new *colors
